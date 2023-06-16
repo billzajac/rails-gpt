@@ -1,6 +1,12 @@
 # README
 
+This is a super simple rails project that will send requests to the ChatGPT API
+The magic all happens in app/services/chatgpt_service.rb which uses httparty to call the API
+
 ## Configure
+
+* Set your API key, default model, and timeout in the credentials file
+
 ```
 EDITOR="vim" bin/rails credentials:edit
 ```
