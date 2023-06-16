@@ -1,24 +1,22 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Configure
+```
+EDITOR="vim" bin/rails credentials:edit
+```
 
-Things you may want to cover:
+* Note: gpt-4 will require a much larger timeout
 
-* Ruby version
+```
+chatgpt_api_key: YOUR_KEY
+chatgpt_api_model: gpt-3.5-turbo
+chatgpt_api_timeout: 10
+```
 
-* System dependencies
+## Usage
 
-* Configuration
+```
+rails c
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+response = ChatgptService.call("tell me something interesting about spiders", "gpt-4", 300)
+```
